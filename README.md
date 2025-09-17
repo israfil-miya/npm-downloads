@@ -1,12 +1,12 @@
 # NPM Downloads
 
-This project provides a **REST API** to fetch and aggregate download counts for NPM packages over a specified date range. The API handles the limitations of the NPM download counts endpoint by breaking large date ranges into smaller chunks.
+This project provides a **REST API** to fetch and aggregate download count for NPM packages over a specified date range. The API handles the limitations of the NPM download count endpoint by breaking large date ranges into smaller chunks.
 
-## Limitations of NPM's Download Counts API
+## Limitations of NPM's Download Count API
 
-NPM's download counts API has the following limitations:
+NPM's download count API has the following limitations:
 
-- **Date Range Limitation:** The API does not support querying download counts over long date ranges in a single request. This is due to constraints on the maximum period for which data can be retrieved in one call.
+- **Date Range Limitation:** The API does not support querying download count over long date ranges in a single request. This is due to constraints on the maximum period for which data can be retrieved in one call.
 - **Rate Limiting:** The API has rate limits that can affect how frequently data can be fetched.
 
 ## How These Limitations Are Addressed
@@ -16,7 +16,7 @@ NPM's download counts API has the following limitations:
 
 ## API Endpoint
 
-### Fetch Download Counts
+### Fetch Download Count
 
 #### Endpoint: `/api/download-count`
 
@@ -36,7 +36,7 @@ GET /api/download-count?package=package1,package2&from=2022-04-01&until=2024-08-
 
 #### Response:
 
-The response will include download counts for each package within the specified date range. It will also include the total download counts and sorted data by date.
+The response will include download count for each package within the specified date range. It will also include the total download count and sorted data by date.
 
 #### Example Response:
 
@@ -47,7 +47,7 @@ The response will include download counts for each package within the specified 
     "downloadsByDate": {
       "2022-04-01": 1000,
       "2022-04-02": 1200,
-      // more date-wise counts
+      // more date-wise count
     }
   },
   "package2": {
@@ -55,7 +55,7 @@ The response will include download counts for each package within the specified 
     "downloadsByDate": {
       "2022-04-01": 1500,
       "2022-04-02": 1800,
-      // more date-wise counts
+      // more date-wise count
     }
   }
 }
